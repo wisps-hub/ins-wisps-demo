@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: @application.name@
+  config:
+    import: classpath:datasource.yml
+server:
+  port: 8801
