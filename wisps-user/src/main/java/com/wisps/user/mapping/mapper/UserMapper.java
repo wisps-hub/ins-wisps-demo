@@ -1,7 +1,7 @@
-package com.wisps.mapping.mapper;
+package com.wisps.user.mapping.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wisps.entity.UserEntity;
+import com.wisps.user.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

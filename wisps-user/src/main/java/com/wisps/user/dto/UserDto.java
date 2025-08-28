@@ -1,13 +1,14 @@
-package com.wisps.entity;
+package com.wisps.user.dto;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@TableName("org_user")
-public class UserEntity extends BaseEntity{
+public class UserDto{
+    private Long id;
     private String oid;
     private String uid;
     private String realName;
@@ -16,4 +17,6 @@ public class UserEntity extends BaseEntity{
     private String avatarUrl;
     private String email;
     private String password;
+    private String createtime;
+    private String modifytime;
 }

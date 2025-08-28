@@ -1,9 +1,9 @@
-package com.wisps.mapping.dao.impl;
+package com.wisps.user.mapping.dao.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wisps.entity.UserEntity;
-import com.wisps.mapping.dao.UserDao;
-import com.wisps.mapping.mapper.UserMapper;
+import com.wisps.user.entity.UserEntity;
+import com.wisps.user.mapping.dao.UserDao;
+import com.wisps.user.mapping.mapper.UserMapper;
 import org.springframework.stereotype.Component;
 
 @Component

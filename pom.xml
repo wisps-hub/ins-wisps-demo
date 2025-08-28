@@ -18,6 +18,7 @@
     <modules>
         <module>wips-mapper</module>
         <module>wisps-cache</module>
+        <module>wisps-user</module>
     </modules>
 
     <properties>
