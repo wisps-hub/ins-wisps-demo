@@ -1,13 +1,3 @@
 spring:
   application:
     name: @application.name@
-  config:
-    import: classpath:datasource.yml
-server:
-  port: 8801
-
-wisps:
-  mysql:
-    url: jdbc:mysql://localhost:3306/d1
-    username: root
-    password: root

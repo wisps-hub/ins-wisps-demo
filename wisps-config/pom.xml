@@ -9,29 +9,32 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>wisps-user</artifactId>
+    <artifactId>wisps-config</artifactId>
+    <version>0.0.1</version>
 
     <properties>
-        <application.name>wisps-user</application.name>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <alibaba.cloud.version>2023.0.3.2</alibaba.cloud.version>
+        <spring.cloud.version>4.1.0</spring.cloud.version>
     </properties>
 
     <dependencies>
+        <!-- discovery center -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!-- config center -->
         <dependency>
-            <groupId>com.wisps</groupId>
-            <artifactId>wips-mapper</artifactId>
-            <version>0.0.1</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+        <!--    bootstrap     -->
         <dependency>
-            <groupId>com.wisps</groupId>
-            <artifactId>wisps-config</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
 </project>
