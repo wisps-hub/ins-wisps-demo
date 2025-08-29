@@ -1,16 +1,18 @@
 spring:
+  profiles:
+    active: @env@
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-        group: wisps
+        server-addr: @nacos.server-addr@
+        group: @nacos.group@
         register-enabled: false
       config:
-        server-addr: localhost:8848
-        username: nacos
-        password: nacos
-        namespace: d41a46f7-3b64-44c0-ab9f-b5766ca386d3
-        group: wisps
+        server-addr: @nacos.server-addr@
+        username: @nacos.username@
+        password: @nacos.password@
+        namespace: @nacos.namespace@
+        group: @nacos.group@
         encode: UTF-8
         config-retry-time: 3
         file-extension: yml
