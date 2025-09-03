@@ -8,6 +8,8 @@ import com.wisps.user.mapping.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserBizImpl implements UserBiz {
 
@@ -18,6 +20,12 @@ public class UserBizImpl implements UserBiz {
     public UserDto getById(Long id) {
         UserEntity userEntity = userDao.selectById(id);
         return userEntity == null? null : UserAssemble.assemble2UserDto(userEntity);
+    }
+
+    @Override
+    public List<UserDto> getList(List<Long> ids) {
+        List<UserEntity> list = userDao.getList(ids);
+        return UserAssemble.assemble2UserDtos(list);
     }
 
 }

@@ -9,29 +9,33 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>wisps-user</artifactId>
+    <artifactId>wisps-rpc</artifactId>
 
     <properties>
-        <application.name>wisps-user</application.name>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dubbo.version>3.2.10</dubbo.version>
     </properties>
 
     <dependencies>
+        <!--   dubbo   -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.wisps</groupId>
-            <artifactId>wips-mapper</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+            <version>${dubbo.version}</version>
         </dependency>
+        <!-- validation -->
         <dependency>
             <groupId>com.wisps</groupId>
-            <artifactId>wisps-config</artifactId>
-            <version>0.0.1</version>
+            <artifactId>wisps-base</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
+
 </project>
